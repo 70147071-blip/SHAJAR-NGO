@@ -1,0 +1,46 @@
+<section class="flex items-center justify-between px-20 py-20">
+
+  <!-- Left Content -->
+  <div class="max-w-lg">
+    
+    <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm">
+      Supporting Communities
+    </span>
+
+    <h1 class="text-5xl font-bold mt-5 leading-tight">
+      Empowering <span class="text-green-700">Lives</span> Through Support
+    </h1>
+
+    <p class="text-gray-600 mt-4">
+      Shajar Hope Alliance provides financial assistance and educational
+      opportunities to individuals who need support to build a better future.
+    </p>
+
+    <div class="flex gap-4 mt-6">
+      <button class="bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition">
+        Apply Now
+      </button>
+
+      <button class="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-100 transition">
+        Learn More
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Right Card -->
+  <div class="bg-white shadow-xl rounded-2xl w-64 h-64 flex flex-col items-center justify-center">
+    
+    <img src="logo.png" class="w-20 mb-3">
+
+    <h2 class="text-green-700 font-bold tracking-widest">
+      SHAJAR
+    </h2>
+
+    <p class="text-gray-500 text-sm">
+      Hope Alliance
+    </p>
+
+  </div>
+
+</section>
