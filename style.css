@@ -1,46 +1,130 @@
-<section class="flex items-center justify-between px-20 py-20">
 
-  <!-- Left Content -->
-  <div class="max-w-lg">
-    
-    <span class="bg-green-100 text-green-700 px-4 py-1 rounded-full text-sm">
-      Supporting Communities
-    </span>
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    <h1 class="text-5xl font-bold mt-5 leading-tight">
-      Empowering <span class="text-green-700">Lives</span> Through Support
-    </h1>
+@keyframes blob {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -50px) scale(1.1); }
+  66%  { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
 
-    <p class="text-gray-600 mt-4">
-      Shajar Hope Alliance provides financial assistance and educational
-      opportunities to individuals who need support to build a better future.
-    </p>
+.animate-blob {
+  animation: blob 7s infinite;
+}
 
-    <div class="flex gap-4 mt-6">
-      <button class="bg-green-700 text-white px-6 py-3 rounded-full hover:bg-green-800 transition">
-        Apply Now
-      </button>
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
 
-      <button class="border border-gray-400 px-6 py-3 rounded-full hover:bg-gray-100 transition">
-        Learn More
-      </button>
-    </div>
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
 
-  </div>
+html {
+  scroll-behavior: smooth;
+}
 
-  <!-- Right Card -->
-  <div class="bg-white shadow-xl rounded-2xl w-64 h-64 flex flex-col items-center justify-center">
-    
-    <img src="logo.png" class="w-20 mb-3">
+::selection {
+  background-color: #e0e7ff;
+  color: #312e81;
+}
 
-    <h2 class="text-green-700 font-bold tracking-widest">
-      SHAJAR
-    </h2>
+*:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
 
-    <p class="text-gray-500 text-sm">
-      Hope Alliance
-    </p>
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-  </div>
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
 
-</section>
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-glow:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
